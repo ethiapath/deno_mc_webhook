@@ -10,7 +10,7 @@ channel.onmessage = (event) => {
 const router = new Router();
 router
   .get("/", (context) => {
-	  console.log('tessst main route');
+	  console.log(Date.now() + ' main route ' + JSON.stringify(context, null, 2));
     context.response.body = "Chat server!";
   })
   .get("/messages", (context) => {
